@@ -434,7 +434,7 @@ body {
 }
 
 /* Scroll Indicator */
-.scroll-indicator {
+/* .scroll-indicator {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -484,7 +484,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
+ */
 /* ============================================
    SECTION STYLES
    ============================================ */
@@ -1643,3 +1643,4 @@ section {
         opacity: 0;
     }
 }
+
