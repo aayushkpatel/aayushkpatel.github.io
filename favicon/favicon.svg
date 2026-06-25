@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aayush Patel monogram favicon">
+  <defs>
+    <linearGradient id="g" x1="96" y1="76" x2="416" y2="432" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="130" fill="#FFFFFF"/>
+  <rect x="38" y="38" width="436" height="436" rx="112" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="10"/>
+  <circle cx="256" cy="256" r="154" fill="url(#g)" opacity="0.96"/>
+  <path d="M174 342L238 170H274L338 342H305L291 302H220L206 342H174ZM230 274H281L256 202L230 274Z" fill="#FFFFFF"/>
+  <path d="M302 176H342L289 245L348 342H309L266 272L302 176Z" fill="#FFFFFF" opacity="0.95"/>
+</svg>

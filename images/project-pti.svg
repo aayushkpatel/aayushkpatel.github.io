@@ -1,0 +1,42 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Parent Teacher Interaction Platform project preview placeholder">
+  <defs>
+    <linearGradient id="bg3" x1="100" y1="60" x2="1500" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="accent3" x1="260" y1="180" x2="1320" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" rx="44" fill="url(#bg3)"/>
+  <rect x="70" y="70" width="1460" height="760" rx="36" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <rect x="110" y="110" width="1380" height="90" rx="24" fill="#F8FAFC" stroke="#E5E7EB"/>
+  <rect x="110" y="230" width="410" height="600" rx="32" fill="#F8FAFC" stroke="#E5E7EB"/>
+  <rect x="550" y="230" width="370" height="286" rx="32" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="550" y="544" width="370" height="286" rx="32" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="960" y="230" width="490" height="600" rx="32" fill="#F8FAFC" stroke="#E5E7EB"/>
+  <circle cx="184" cy="155" r="26" fill="url(#accent3)"/>
+  <rect x="232" y="142" width="190" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="160" y="300" width="290" height="20" rx="10" fill="#CBD5E1"/>
+  <rect x="160" y="346" width="220" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="160" y="380" width="260" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="160" y="426" width="280" height="54" rx="18" fill="url(#accent3)" opacity="0.92"/>
+  <rect x="160" y="504" width="260" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="160" y="540" width="220" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="160" y="576" width="240" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="160" y="636" width="100" height="100" rx="22" fill="#14B8A6" opacity="0.12"/>
+  <rect x="280" y="636" width="100" height="100" rx="22" fill="#22D3EE" opacity="0.12"/>
+  <rect x="590" y="272" width="140" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="590" y="314" width="250" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="590" y="356" width="190" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="590" y="602" width="140" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="590" y="644" width="250" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="590" y="686" width="190" height="18" rx="9" fill="#CBD5E1"/>
+  <rect x="1010" y="280" width="350" height="70" rx="22" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="1010" y="374" width="350" height="70" rx="22" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="1010" y="468" width="350" height="70" rx="22" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <rect x="1010" y="562" width="350" height="70" rx="22" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="1010" y="724" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Secure communication portal</text>
+  <text x="1010" y="766" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500">Collaboration for students, parents, and teachers</text>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "name": "Aayush Patel Portfolio",
+  "short_name": "Aayush Patel",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "favicon/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

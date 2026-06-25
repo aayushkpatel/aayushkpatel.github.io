@@ -1,628 +1,584 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aayush Patel | Full-Stack Developer & Database Specialist</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aayush Patel - Full-Stack Developer in Ahmedabad specializing in analytics.">
+    <meta name="keywords"
+        content="Aayush Patel, Full-Stack Developer, analytics, Database Specialist, Ahmedabad, portfolio, web developer, data analytics">
+    <meta name="author" content="Aayush Patel">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aayush Patel | Full-Stack Developer">
+    <meta property="og:description" content="Minimal portfolio with clean motion, selected work, and contact details.">
+    <meta property="og:url" content="https://aayushpatel.dev/">
+    <meta property="og:image" content="favicon/favicon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aayush Patel | Full-Stack Developer">
+    <meta name="twitter:description" content="Minimal portfolio for Aayush Patel.">
+    <link rel="canonical" href="https://aayushpatel.dev/">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Aayush Patel | Full-Stack Developer</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aayush Patel",
+      "jobTitle": "Full-Stack Developer",
+      "description": "Full-Stack Developer specializing in analytics and Database Specialist.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      },
+      "email": "ayushkpatel1801@gmail.com",
+      "telephone": "+91 95120 05590",
+      "sameAs": [
+        "https://linkedin.com/in/aayush-patel01",
+        "https://github.com/aayushkpatel"
+      ]
+    }
+  </script>
 </head>
+
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor-glow"></div>
-    <div class="cursor-dot"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <!-- Three.js Canvas Background -->
-    <canvas id="bg-canvas"></canvas>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-logo">
-            <span class="logo-text">Aayush Patel</span>
+    <div class="loading-screen" aria-hidden="true">
+        <div class="loading-card">
+            <div class="loading-mark">AP</div>
+            <p>Loading</p>
+            <div class="loading-bar"><span></span></div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
-            <li><a href="#about" class="nav-link" data-text="About">About</a></li>
-            <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
-            <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
-            <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-greeting">
-                <span class="greeting-line"></span>
-                <span class="greeting-text">Welcome to my digital realm</span>
-            </div>
-            <h1 class="hero-title">
-                <span class="title-line">
-                    <span class="char">A</span><span class="char">a</span><span class="char">y</span><span class="char">u</span><span class="char">s</span><span class="char">h</span>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="page-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="#hero" aria-label="Aayush Patel home">
+                <span class="brand-mark">AP</span>
+                <span class="brand-copy">
+                    <strong>Aayush Patel</strong>
+                    <span>Portfolio</span>
                 </span>
-                <span class="title-line">
-                    <span class="char">P</span><span class="char">a</span><span class="char">t</span><span class="char">e</span><span class="char">l</span>
-                </span>
-            </h1>
-            <div class="hero-headline">
-                <span class="typing-text"></span>
-                <span class="cursor-blink">|</span>
-            </div>
-            <p class="hero-description">
-                Architecting intelligent web solutions and scalable data architectures 
-                <span class="highlight">for the future.</span>
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <span class="btn-text">View Projects</span>
-                    <span class="btn-glow"></span>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span class="btn-text">Contact Me</span>
-                    <span class="btn-glow"></span>
-                </a>
-            </div>
-        </div>
+            </a>
 
-        <!-- <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll to explore</span>
-        </div> -->
-    </section>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+                <span class="menu-toggle-bars" aria-hidden="true"></span>
+                <span class="sr-only">Open menu</span>
+            </button>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="section-header">
-            <span class="section-tag">About Me</span>
-            <h2 class="section-title">
-                <span class="title-glitch" data-text="The Architect">The Architect</span>
-            </h2>
-        </div>
-        <div class="about-content">
-            <div class="about-image">
-                <div class="image-frame">
-                    <img src="images/photo.jpg" alt="Aayush Patel" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="image-placeholder" style="display: none;">
-                        <span class="placeholder-icon">👨‍💻</span>
-                        <span class="placeholder-text">Photo</span>
-                    </div>
-                    <div class="frame-corner top-left"></div>
-                    <div class="frame-corner top-right"></div>
-                    <div class="frame-corner bottom-left"></div>
-                    <div class="frame-corner bottom-right"></div>
-                </div>
-                <div class="floating-badge">
-                    <span class="badge-icon">⚡</span>
-                    <span class="badge-text">Available for Work</span>
-                </div>
+            <div class="nav-panel" id="primary-menu">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a class="nav-resume" href="assets/resume.pdf" download>Resume</a>
             </div>
-            <div class="about-text">
-                <div class="about-card">
-                    <div class="card-glitch"></div>
-                    <p class="about-paragraph">
-                        I am a <span class="text-glow">results-driven developer</span> based in Ahmedabad, bridging the gap between 
-                        front-end user experience and heavy backend data management. I hold a 
-                        <span class="text-highlight">Bachelor of Computer Applications</span> and am currently pursuing an 
-                        <span class="text-highlight">MSc in Information Technology</span> with a focus on Business Intelligence.
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero section" id="hero">
+            <div class="hero-bg" aria-hidden="true">
+                <span class="blob blob-a"></span>
+                <span class="blob blob-b"></span>
+                <span class="blob blob-c"></span>
+            </div>
+
+            <div class="hero-grid container">
+
+                <!-- LEFT SIDE -->
+                <div class="hero-copy reveal">
+
+                    <p class="eyebrow">Hello, I'm</p>
+
+                    <h1>Aayush Patel</h1>
+
+                    <h2 class="hero-role">
+                        <span class="typing-text" data-typing></span>
+                    </h2>
+
+                    <p class="hero-summary">
+                        Passionate about building scalable web applications,
+                        interactive dashboards, and database systems with modern technologies.
                     </p>
-                    <p class="about-paragraph">
-                        I specialize in combining <span class="text-glow">traditional backend frameworks</span> with advanced 
-                        <span class="text-glow">big data tools</span> and <span class="text-glow">AI integrations</span> to build 
-                        highly efficient, scalable applications that push the boundaries of what's possible.
-                    </p>
-                    <div class="about-tags">
-                        <span class="tag">Problem Solver</span>
-                        <span class="tag">Data Architect</span>
-                        <span class="tag">AI Enthusiast</span>
-                        <span class="tag">Full-Stack Ninja</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="section-header">
-            <span class="section-tag">Technical Arsenal</span>
-            <h2 class="section-title">
-                <span class="title-glitch" data-text="Skills Matrix">Skills Matrix</span>
-            </h2>
-        </div>
-        <div class="skills-grid">
-            <!-- Languages -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="category-title">Languages</h3>
-                </div>
-                <div class="skills-list">
-                    <div class="skill-item" data-skill="Python" data-level="90">
-                        <div class="skill-info">
-                            <span class="skill-name">Python</span>
-                            <span class="skill-percent">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item" data-skill="PHP" data-level="85">
-                        <div class="skill-info">
-                            <span class="skill-name">PHP</span>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item" data-skill="Java" data-level="75">
-                        <div class="skill-info">
-                            <span class="skill-name">Java</span>
-                            <span class="skill-percent">80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item" data-skill="PL/SQL" data-level="80">
-                        <div class="skill-info">
-                            <span class="skill-name">PL/SQL</span>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="assets/resume.pdf" download>
+                            Download Resume
+                        </a>
 
-            <!-- Databases & Big Data -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                        </svg>
-                    </div>
-                    <h3 class="category-title">Databases & Big Data</h3>
-                </div>
-                <div class="skills-list">
-                    <div class="skill-item" data-skill="MySQL" data-level="92">
-                        <div class="skill-info">
-                            <span class="skill-name">MySQL</span>
-                            <span class="skill-percent">92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item" data-skill="MongoDB" data-level="78">
-                        <div class="skill-info">
-                            <span class="skill-name">MongoDB</span>
-                            <span class="skill-percent">75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item" data-skill="Hadoop" data-level="70">
-                        <div class="skill-info">
-                            <span class="skill-name">Hadoop</span>
-                            <span class="skill-percent">70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item" data-skill="Hive" data-level="72">
-                        <div class="skill-info">
-                            <span class="skill-name">Hive</span>
-                            <span class="skill-percent">75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Web Technologies -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3 class="category-title">Web Technologies</h3>
-                </div>
-                <div class="skills-list">
-                    <div class="skill-item" data-skill="Flask" data-level="88">
-                        <div class="skill-info">
-                            <span class="skill-name">Flask</span>
-                            <span class="skill-percent">98%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item" data-skill="HTML/CSS" data-level="95">
-                        <div class="skill-info">
-                            <span class="skill-name">HTML/CSS</span>
-                            <span class="skill-percent">100%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item" data-skill="Responsive Design" data-level="90">
-                        <div class="skill-info">
-                            <span class="skill-name">Responsive Design</span>
-                            <span class="skill-percent">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tools & BI -->
-            <div class="skill-category">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5"></path>
-                            <path d="M2 12l10 5 10-5"></path>
-                        </svg>
-                    </div>
-                    <h3 class="category-title">Tools & BI</h3>
-                </div>
-                <div class="skills-list">
-                    <div class="skill-item" data-skill="Power BI" data-level="82">
-                        <div class="skill-info">
-                            <span class="skill-name">Power BI</span>
-                            <span class="skill-percent">70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item" data-skill="AI Prompt Generation" data-level="88">
-                        <div class="skill-info">
-                            <span class="skill-name">AI Prompt Generation</span>
-                            <span class="skill-percent">95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item" data-skill="Gemini API" data-level="85">
-                        <div class="skill-info">
-                            <span class="skill-name">Gemini API Integration</span>
-                            <span class="skill-percent">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress"></div>
-                            <div class="skill-glow"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="section-header">
-            <span class="section-tag">Experience & Projects</span>
-            <h2 class="section-title">
-                <span class="title-glitch" data-text="Digital Creations">Digital Creations</span>
-            </h2>
-        </div>
-        <div class="projects-grid">
-            <!-- Project 1: Academic 360 -->
-            <div class="project-card featured">
-                <div class="card-hologram"></div>
-                <div class="card-content">
-                    <div class="project-header">
-                        <span class="project-number">01</span>
-                        <div class="project-links">
-                            <!-- <a href="#" class="project-link" title="View Code">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                            </a>
-                            <a href="#" class="project-link" title="Live Demo">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                                </svg>
-                            </a> -->
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <div class="image-overlay"></div>
-                        <img src="images/project-academic-1.png" alt="Academic 360" class="project-photo" onerror="this.style.display='none'">
-                        <div class="project-placeholder">
-                            <span class="placeholder-icon">🎓</span>
-                            <span class="placeholder-text">Academic 360 Dashboard</span>
-                        </div>
-                    </div>
-                    <div class="project-gallery">
-                        <img src="images/project-academic-1.png" alt="Academic 360 - View 1" class="gallery-thumb" onerror="this.style.display='none'">
-                        <img src="images/project-academic-2.png" alt="Academic 360 - View 2" class="gallery-thumb" onerror="this.style.display='none'">
-                        <img src="images/project-academic-3.png" alt="Academic 360 - View 3" class="gallery-thumb" onerror="this.style.display='none'">
-                        <img src="images/project-academic-4.png" alt="Academic 360 - View 4" class="gallery-thumb" onerror="this.style.display='none'">
-                        <img src="images/project-academic-5.png" alt="Academic 360 - View 5" class="gallery-thumb" onerror="this.style.display='none'">
-                    </div>
-                    <h3 class="project-title">Academic 360</h3>
-                    <p class="project-subtitle">Educational ERP System</p>
-                    <p class="project-description">
-                        Architecting a full-stack educational ERP platform utilizing Python, Flask, and MySQL. 
-                        Integrating the Gemini API to analyze historical student records for automated 
-                        behavioral analysis and academic insights.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Gemini API</span>
-                        <span class="tech-tag">AI Integration</span>
-                    </div>
-                </div>
-                <div class="card-glitch-effect"></div>
-            </div>
-
-            <!-- Experience 1: Freelance -->
-            <div class="project-card">
-                <div class="card-hologram"></div>
-                <div class="card-content">
-                    <div class="project-header">
-                        <span class="project-number">02</span>
-                        <div class="project-links">
-                            <a href="https://www.shreejihr.com" target="_blank" class="project-link" title="Visit Website">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <div class="image-overlay"></div>
-                        <img src="images/project-shreeji-1.png" alt="Shreeji Enterprise" class="project-photo" onerror="this.style.display='none'">
-                        <div class="project-placeholder">
-                            <span class="placeholder-icon">🏢</span>
-                            <span class="placeholder-text">Shreeji Enterprise</span>
-                        </div>
-                    </div>
-                    <div class="project-gallery">
-                        <img src="images/project-shreeji-1.png" alt="Shreeji Enterprise - View 1" class="gallery-thumb" onerror="this.style.display='none'">
-                        <img src="images/project-shreeji-2.png" alt="Shreeji Enterprise - View 2" class="gallery-thumb" onerror="this.style.display='none'">
-                        <img src="images/project-shreeji-3.png" alt="Shreeji Enterprise - View 3" class="gallery-thumb" onerror="this.style.display='none'">
-                    </div>
-                    <h3 class="project-title">Shreeji Enterprise</h3>
-                    <p class="project-subtitle">Freelance Web Development</p>
-                    <p class="project-description">
-                        Built a fully responsive business website for Shreeji Enterprise. Engineered the 
-                        database architecture utilizing PHP and MySQL to handle product data efficiently, 
-                        optimizing server queries to improve load times and cross-device performance.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Responsive Design</span>
-                        <span class="tech-tag">Database Optimization</span>
-                    </div>
-                </div>
-                <div class="card-glitch-effect"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="section-header">
-            <span class="section-tag">Establish Connection</span>
-            <h2 class="section-title">
-                <span class="title-glitch" data-text="Initiate Contact">Initiate Contact</span>
-            </h2>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="info-card">
-                    <h3 class="info-title">Let's Build the Future Together</h3>
-                    <p class="info-description">
-                        Ready to transform your ideas into reality? I'm always open to discussing 
-                        new projects, creative ideas, or opportunities to be part of your vision.
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Email</span>
-                                <a href="mailto:ayushkpatel1801@gmail.com" class="contact-value">ayushkpatel1801@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                </svg>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">Phone</span>
-                                <a href="tel:+919512005590" class="contact-value">+91 95120 05590</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                    <rect x="2" y="9" width="4" height="12"></rect>
-                                    <circle cx="4" cy="4" r="2"></circle>
-                                </svg>
-                            </div>
-                            <div class="contact-text">
-                                <span class="contact-label">LinkedIn</span>
-                                <a href="https://www.linkedin.com/in/aayush-patel01" target="_blank" class="contact-value">linkedin.com/in/aayush-patel01</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resume-download">
-                        <a href="images/resume.pdf" class="btn btn-primary" download>
-                            <span class="btn-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                    <polyline points="7 10 12 15 17 10"></polyline>
-                                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                                </svg>
-                            </span>
-                            <span class="btn-text">Download Resume</span>
-                            <span class="btn-glow"></span>
+                        <a class="button button-secondary" href="#projects">
+                            View Projects
                         </a>
                     </div>
-                </div>
-            </div>
-            <div class="contact-form-wrapper">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-header">
-                        <span class="form-tag">&lt;form&gt;</span>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required placeholder=" ">
-                        <label for="name">Your Name</label>
-                        <div class="input-line"></div>
-                        <div class="input-glow"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required placeholder=" ">
-                        <label for="email">Your Email</label>
-                        <div class="input-line"></div>
-                        <div class="input-glow"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" required placeholder=" ">
-                        <label for="subject">Subject</label>
-                        <div class="input-line"></div>
-                        <div class="input-glow"></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-                        <label for="message">Your Message</label>
-                        <div class="input-line"></div>
-                        <div class="input-glow"></div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">
-                        <span class="btn-text">Send Message</span>
-                        <span class="btn-glow"></span>
-                    </button>
-                    <div class="form-footer">
-                        <span class="form-tag">&lt;/form&gt;</span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <span class="logo-text">Aayush Patel</span>
+                    <div class="social-row" style="display:flex;align-items:center;gap:16px;margin-top:2rem;">
+
+                        <a href="https://linkedin.com/in/aayush-patel01" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn" style="display:flex;align-items:center;justify-content:center;
+               width:52px;height:52px;border-radius:50%;
+               background:#fff;border:1px solid rgba(0,0,0,.08);
+               color:#1f2937;text-decoration:none;
+               box-shadow:0 8px 20px rgba(0,0,0,.08);
+               transition:.3s;">
+
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                <path
+                                    d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.1 1 2.5 1 4.98 2.12 4.98 3.5ZM.2 8.3h4.6V24H.2V8.3Zm7.6 0h4.4v2.14h.06c.62-1.18 2.15-2.43 4.43-2.43 4.74 0 5.62 3.12 5.62 7.18V24h-4.6v-7.35c0-1.75-.03-4-2.44-4s-2.82 1.9-2.82 3.87V24H7.8V8.3Z" />
+                            </svg>
+                        </a>
+
+                        <a href="https://github.com/aayushkpatel" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub" style="display:flex;align-items:center;justify-content:center;
+               width:52px;height:52px;border-radius:50%;
+               background:#fff;border:1px solid rgba(0,0,0,.08);
+               color:#1f2937;text-decoration:none;
+               box-shadow:0 8px 20px rgba(0,0,0,.08);
+               transition:.3s;">
+
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                <path
+                                    d="M12 .5C5.73.5.62 5.68.62 12.06c0 5.1 3.2 9.42 7.64 10.94.56.1.77-.25.77-.55v-1.98c-3.1.69-3.75-1.34-3.75-1.34-.5-1.31-1.22-1.66-1.22-1.66-.99-.69.08-.68.08-.68 1.1.08 1.68 1.15 1.68 1.15.97 1.69 2.55 1.2 3.17.92.1-.72.38-1.2.69-1.48-2.48-.29-5.08-1.27-5.08-5.66 0-1.25.43-2.27 1.14-3.07-.12-.3-.5-1.52.11-3.16 0 0 .93-.3 3.04 1.17a10.3 10.3 0 0 1 5.54 0c2.1-1.47 3.04-1.17 3.04-1.17.61 1.64.23 2.86.11 3.16.71.8 1.14 1.82 1.14 3.07 0 4.4-2.6 5.36-5.09 5.65.4.35.75 1.04.75 2.1v3.11c0 .3.2.65.78.54 4.44-1.52 7.63-5.84 7.63-10.94C23.37 5.68 18.26.5 12 .5Z" />
+                            </svg>
+                        </a>
+
+                        <a href="mailto:ayushkpatel1801@gmail.com" aria-label="Email" style="display:flex;align-items:center;justify-content:center;
+               width:52px;height:52px;border-radius:50%;
+               background:#fff;border:1px solid rgba(0,0,0,.08);
+               color:#1f2937;text-decoration:none;
+               box-shadow:0 8px 20px rgba(0,0,0,.08);
+               transition:.3s;">
+
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                <path
+                                    d="M2.5 4h19A2.5 2.5 0 0 1 24 6.5v11A2.5 2.5 0 0 1 21.5 20h-19A2.5 2.5 0 0 1 0 17.5v-11A2.5 2.5 0 0 1 2.5 4Zm0 2 9.5 6.18L21.5 6H2.5Zm0 10h19V8.26l-8.98 5.85a1 1 0 0 1-1.05 0L2.5 8.26V16Z" />
+                            </svg>
+                        </a>
+
+                    </div>
+
                 </div>
-                <p class="footer-tagline">Building the future, one line of code at a time.</p>
+
+                <!-- RIGHT SIDE -->
+                <div class="hero-visual reveal">
+
+                    <div class="profile-frame">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                        <div class="profile-glow"></div>
+
+                        <img src="images/profile.png" alt="Aayush Patel" loading="eager">
+                    </div>
+
+
+
+                </div>
+
             </div>
+            <section class="section container reveal" id="about">
+
+                <div class="section-heading">
+                    <p class="eyebrow">ABOUT ME</p>
+
+                    <h2 style="font-size:2.8rem !important;font-weight:700 !important;margin-top:.5rem !important;">
+                        Building Solutions with Code & Data
+                    </h2>
+
+                    <p
+                        style="max-width:720px;margin:1rem auto 0 !important;font-size:1.05rem;color:#6b7280;line-height:1.8;">
+                        I'm a Full Stack Developer and Data Analytics enthusiast focused on creating
+                        modern, scalable, and user-friendly applications.
+                    </p>
+                </div>
+
+                <div class="about-grid"
+                    style="display:grid !important;grid-template-columns:2fr 1fr !important;gap:2rem !important;align-items:start !important;">
+
+                    <article class="panel about-panel" style="padding:2rem !important;border-radius:20px !important;">
+
+                        <h3 class="eyebrow" style="font-size: large;">
+                            Who I Am
+                        </h3>
+
+                        <p style="line-height:1.8;font-size:1rem;margin-bottom:1.2rem;">
+                            I am currently pursuing a <strong>M.Sc. in Information Technology
+                                (Business Intelligence & Analytics)</strong> at JG University after earning my
+                            Bachelor's degree in
+                            Computer Applications from GLS University.
+                        </p>
+
+                        <p style="line-height:1.8;font-size:1rem;margin-bottom:1.2rem;">
+                            My interests lie in full-stack web development, database design, data
+                            analytics, and building practical software solutions that are clean,
+                            scalable, and easy to maintain.
+                        </p>
+
+                        <p style="line-height:1.8;font-size:1rem;">
+                            I enjoy solving real-world problems through technology while continuously
+                            learning modern frameworks, programming languages, and industry best
+                            practices.
+                        </p>
+
+                    </article>
+
+                    <div style="display:grid !important;gap:1rem !important;">
+
+                        <article class="mini-card" style="padding:1.2rem;border-radius:16px;">
+                            <span style="display:block;color:#14b8a6;font-size:.8rem;">📍 LOCATION</span>
+                            <strong style="font-size:1.05rem;">Ahmedabad, India</strong>
+                        </article>
+
+                        <article class="mini-card" style="padding:1.2rem;border-radius:16px;">
+                            <span style="display:block;color:#14b8a6;font-size:.8rem;">💻 SPECIALIZATION</span>
+                            <strong style="font-size:1.05rem;">Full Stack Development</strong>
+                        </article>
+
+                        <article class="mini-card" style="padding:1.2rem;border-radius:16px;">
+                            <span style="display:block;color:#14b8a6;font-size:.8rem;">📊 INTERESTS</span>
+                            <strong style="font-size:1.05rem;">Web Development</strong>
+                            <strong style="font-size:1.05rem;">Data Analytics & Dashboards</strong>
+                        </article>
+
+                        <article class="mini-card" style="padding:1.2rem;border-radius:16px;">
+                            <span style="display:block;color:#14b8a6;font-size:.8rem;">🚀 GOAL</span>
+                            <strong style="font-size:1.05rem;">Building Impactful Software</strong>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="section container reveal" id="education">
+                <div class="section-heading">
+                    <p class="eyebrow">Education</p>
+                    <h2>Academic progress in tech and analytics.</h2>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-item panel">
+                        <div class="timeline-dot"></div>
+                        <div>
+                            <p class="timeline-meta">2025 - 2027</p>
+                            <h3>M.Sc. Information Technology</h3>
+                            <p>JG University, Ahmedabad</p>
+                            <span class="pill">Specialization: Business Intelligence and Analytics</span>
+                            <span class="pill pill-muted">Currently pursuing</span>
+                        </div>
+                    </article>
+                    <article class="timeline-item panel">
+                        <div class="timeline-dot"></div>
+                        <div>
+                            <p class="timeline-meta">Completed ( 2023 - 2025 )</p>
+                            <h3>Bachelor of Computer Applications</h3>
+                            <p>GLS University</p>
+                            <span class="pill">Computer applications foundation</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section container reveal" id="skills">
+                <div class="section-heading">
+                    <p class="eyebrow">Skills</p>
+                    <h2>Technologies and tools I work with.</h2>
+                </div>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card panel">
+                        <div class="skill-icon">01</div>
+                        <h3>Programming Languages</h3>
+                        <div class="tag-list">
+                            <span>Python</span>
+                            <span>Java</span>
+                            <span>PHP</span>
+                            <span>C</span>
+                            <span>C++</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card panel">
+                        <div class="skill-icon">02</div>
+                        <h3>Web Development</h3>
+                        <div class="tag-list">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Flask</span>
+                            <span>REST APIs</span>
+                            <span>Responsive Design</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card panel">
+                        <div class="skill-icon">03</div>
+                        <h3>Databases</h3>
+                        <div class="tag-list">
+                            <span>MySQL</span>
+                            <span>MongoDB</span>
+                            <span>Oracle Database</span>
+                            <span>SQL</span>
+                            <span>PL/SQL</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card panel">
+                        <div class="skill-icon">04</div>
+                        <h3>Data Analytics</h3>
+                        <div class="tag-list">
+                            <span>Power BI</span>
+                            <span>Apache Hadoop</span>
+                            <span>Apache Hive</span>
+                            <span>Data Visualization</span>
+                            <span>Data Cleaning</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card panel">
+                        <div class="skill-icon">05</div>
+                        <h3>AI & Automation</h3>
+                        <div class="tag-list">
+                            <span>Generative AI</span>
+                            <span>Prompt Engineering</span>
+                            <span>AI Productivity Tools</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card panel">
+                        <div class="skill-icon">06</div>
+                        <h3>Developer Tools</h3>
+                        <div class="tag-list">
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>VS Code</span>
+                            <span>XAMPP</span>
+                            <span>Oracle SQL Developer</span>
+                            <span>OOP</span>
+                            <span>Data Structures</span>
+                            <span>Algorithms</span>
+                            <span>SDLC</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+            <section class="section container reveal" id="projects">
+                <div class="section-heading section-heading-row">
+                    <div>
+                        <p class="eyebrow">Projects</p>
+                    </div>
+                    <div class="filter-bar" aria-label="Project filters">
+                        <button class="filter-chip is-active" type="button" data-filter="all"
+                            aria-pressed="true">All</button>
+                        <button class="filter-chip" type="button" data-filter="web" aria-pressed="false">Web</button>
+                        <button class="filter-chip" type="button" data-filter="data" aria-pressed="false">Data</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card panel" data-category="data web">
+                        <img src="images/project-academic.svg" alt="Academic 360 project screenshot placeholder"
+                            loading="lazy" decoding="async" width="960" height="540">
+                        <div class="project-content">
+                            <div class="project-topline">
+                                <h3>Academic 360</h3>
+                                <span class="project-badge">Full Stack</span>
+                            </div>
+                            <p>Academic management platform with secure login, roles, database integration and behaviour analysis and ai-powered insights.</p>
+                            <div class="tag-list compact">
+                                <span>Python</span><span>Flask</span><span>MySQL</span><span>HTML</span><span>CSS</span>
+                            </div>
+                            <div class="project-actions">
+                                <a class="button button-secondary button-small" href="https://github.com/aayushkpatel"
+                                    target="_blank" rel="noreferrer noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card panel" data-category="web">
+                        <img src="images/project-shreeji.svg" alt="Shreeji Enterprise project screenshot placeholder"
+                            loading="lazy" decoding="async" width="960" height="540">
+                        <div class="project-content">
+                            <div class="project-topline">
+                                <h3>Shreeji Enterprise</h3>
+                                <span class="project-badge">Business Website</span>
+                            </div>
+                            <p>Responsive business website with clean service pages and a simple contact flow.</p>
+                            <div class="tag-list compact">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+                            </div>
+                            <div class="project-actions">
+                                <a class="button button-secondary button-small" href="https://github.com/aayushkpatel"
+                                    target="_blank" rel="noreferrer noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card panel" data-category="data web">
+                        <img src="images/project-pti.svg"
+                            alt="Parent Teacher Interaction Platform screenshot placeholder" loading="lazy"
+                            decoding="async" width="960" height="540">
+                        <div class="project-content">
+                            <div class="project-topline">
+                                <h3>Parent Teacher Interaction Platform</h3>
+                                <span class="project-badge">Hackathon</span>
+                            </div>
+                            <p>Communication platform for students, parents, and teachers.</p>
+                            <div class="tag-list compact">
+                                <span>Communication</span><span>Portal Design</span><span>Collaboration</span>
+                            </div>
+                            <div class="project-actions">
+                                <a class="button button-secondary button-small" href="https://github.com/aayushkpatel"
+                                    target="_blank" rel="noreferrer noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section container reveal" id="contact">
+                <div class="section-heading">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let’s talk about a role or project.</h2>
+                </div>
+                <div class="contact-grid">
+                    <form class="panel contact-form" data-emailjs-form novalidate>
+                        <div class="field-grid">
+                            <label>
+                                <span>Name</span>
+                                <input type="text" name="name" autocomplete="name" required maxlength="80"
+                                    placeholder="Your name">
+                            </label>
+                            <label>
+                                <span>Email</span>
+                                <input type="email" name="email" autocomplete="email" required maxlength="120"
+                                    placeholder="you@example.com">
+                            </label>
+                        </div>
+                        <label>
+                            <span>Subject</span>
+                            <input type="text" name="subject" required maxlength="120"
+                                placeholder="Project, internship, or collaboration">
+                        </label>
+                        <label>
+                            <span>Message</span>
+                            <textarea name="message" rows="6" required minlength="10" maxlength="2000"
+                                placeholder="Write your message here"></textarea>
+                        </label>
+                        <button class="button button-primary" type="submit">Send Message</button>
+                    </form>
+
+                    <div class="contact-side">
+                        <article class="panel contact-card">
+
+                            <p class="eyebrow">Let's Connect</p>
+                            <h3>Contact Information</h3>
+
+                            <p style="margin:0 0 1.5rem;color:var(--text-muted);line-height:1.7;">
+                                I'm currently open to internships, freelance work, collaborations,
+                                and full-time opportunities. Feel free to reach out through email,
+                                phone, or any of my social platforms.
+                            </p>
+
+                            <div style="display:flex;flex-direction:column;gap:1rem;">
+
+                                <div>
+                                    <small style="color:var(--text-muted);display:block;">Email</small>
+                                    <a href="mailto:ayushkpatel1801@gmail.com">
+                                        ayushkpatel1801@gmail.com
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <small style="color:var(--text-muted);display:block;">Phone</small>
+                                    <a href="tel:+919512005599">
+                                        +91 95120 05599
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <small style="color:var(--text-muted);display:block;">Location</small>
+                                    <p>Ahmedabad, Gujarat, India</p>
+                                </div>
+
+                                <div>
+                                    <small
+                                        style="display:block;text-align:center !important;margin-bottom:12px !important;color:#6b7280;font-size:.85rem;font-weight:600;">
+                                        Follow Me
+                                    </small>
+
+                                    <div class="social-row social-row-tight"
+                                        style="display:flex !important;justify-content:center !important;align-items:center !important;gap:16px !important;width:100% !important;">
+
+                                        <a class="social-link" href="https://linkedin.com/in/aayush-patel01"
+                                            target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                                            style="display:flex !important;justify-content:center !important;align-items:center !important;">
+
+                                            <svg viewBox="0 0 24 24" width="22" height="22">
+                                                <path
+                                                    d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6S0 4.88 0 3.5 1.1 1 2.5 1 4.98 2.12 4.98 3.5ZM.2 8.3h4.6V24H.2V8.3Zm7.6 0h4.4v2.14h.06c.62-1.18 2.15-2.43 4.43-2.43 4.74 0 5.62 3.12 5.62 7.18V24h-4.6v-7.35c0-1.75-.03-4-2.44-4s-2.82 1.9-2.82 3.87V24H7.8V8.3Z" />
+                                            </svg>
+                                        </a>
+
+                                        <a class="social-link" href="https://github.com/Aayush-18-Patel" target="_blank"
+                                            rel="noopener noreferrer" aria-label="GitHub"
+                                            style="display:flex !important;justify-content:center !important;align-items:center !important;">
+
+                                            <svg viewBox="0 0 24 24" width="22" height="22">
+                                                <path
+                                                    d="M12 .5C5.73.5.62 5.68.62 12.06c0 5.1 3.2 9.42 7.64 10.94.56.1.77-.25.77-.55v-1.98c-3.1.69-3.75-1.34-3.75-1.34-.5-1.31-1.22-1.66-1.22-1.66-.99-.69.08-.68.08-.68 1.1.08 1.68 1.15 1.68 1.15.97 1.69 2.55 1.2 3.17.92.1-.72.38-1.2.69-1.48-2.48-.29-5.08-1.27-5.08-5.66 0-1.25.43-2.27 1.14-3.07-.12-.3-.5-1.52.11-3.16 0 0 .93-.3 3.04 1.17a10.3 10.3 0 0 1 5.54 0c2.1-1.47 3.04-1.17 3.04-1.17.61 1.64.23 2.86.11 3.16.71.8 1.14 1.82 1.14 3.07 0 4.4-2.6 5.36-5.09 5.65.4.35.75 1.04.75 2.1v3.11c0 .3.2.65.78.54 4.44-1.52 7.63-5.84 7.63-10.94C23.37 5.68 18.26.5 12 .5Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,.08);">
+                            <div style="display:flex;justify-content:space-between;align-items:center;">
+                                <div>
+                                    <small style="color:var(--text-muted);display:block;">Availability</small>
+                                    <strong style="color:#14b8a6;">Open to Opportunities</strong>
+                                </div>
+                                <span style="
+                background:#dcfce7;
+                color:#15803d;
+                padding:.45rem .8rem;
+                border-radius:999px;
+                font-size:.8rem;
+                font-weight:600;">
+                                    ● Available
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Aayush Patel. All rights reserved.</p>
             <div class="footer-links">
-                <h4 class="footer-title">Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <a href="https://linkedin.com/in/aayush-patel01" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+                <a href="https://github.com/aayushkpatel" target="_blank" rel="noreferrer noopener">GitHub</a>
+                <a href="mailto:ayushkpatel1801@gmail.com">Email</a>
             </div>
-            <div class="footer-social">
-                <h4 class="footer-title">Connect</h4>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/aayush-patel01" target="_blank" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                    <a href="mailto:ayushkpatel1801@gmail.com" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-line"></div>
-            <p class="copyright">
-                <span class="code-comment">//</span> 
-                Designed & Built by Aayush Patel 
-                <span class="code-comment">//</span> 
-                <span id="year"></span>
-            </p>
+            <button class="back-to-top" type="button" aria-label="Back to top">Top</button>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="script.js"></script>
-    <noscript>
-        <style>
-            .skill-category, .project-card { opacity: 1 !important; visibility: visible !important; transform: none !important; }
-        </style>
-    </noscript>
+    <script src="script.js" defer></script>
 </body>
-</html>
 
+</html>
