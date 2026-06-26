@@ -17,9 +17,10 @@ const contactForm = document.querySelector('[data-emailjs-form]');
 const formStatus = document.querySelector('[data-form-status]');
 
 const typingPhrases = [
-  'Full-Stack Dev',
-  'BI Systems',
-  'Database Work',
+  'Full-Stack Developer',
+  'Python & Flask Developer',
+  'Data Analytics Enthusiast',
+  'Database Developer'
 ];
 
 const scrollMargin = 110;
