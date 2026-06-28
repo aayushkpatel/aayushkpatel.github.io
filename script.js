@@ -16,6 +16,10 @@ const projectCards = document.querySelectorAll('.project-card');
 const contactForm = document.querySelector('[data-emailjs-form]');
 const formStatus = document.querySelector('[data-form-status]');
 
+const projectModal = document.getElementById('project-modal');
+const modalBody = projectModal ? projectModal.querySelector('.project-modal-body') : null;
+let lastFocusedCard = null;
+
 const typingPhrases = [
   'Full-Stack Developer',
   'Python & Flask Developer',
@@ -162,6 +166,11 @@ document.querySelectorAll('.stat-card, .mini-card, .skill-card').forEach((card, 
 });
 
 const sectionObserver = new IntersectionObserver(entries => {
+  if (window.scrollY < 50) {
+    setActiveLink('');
+    return;
+  }
+
   const visibleEntries = entries.filter(entry => entry.isIntersecting);
   if (!visibleEntries.length) {
     return;
@@ -179,6 +188,9 @@ sections.forEach(section => sectionObserver.observe(section));
 const onDocumentScroll = () => {
   updateProgress();
   updateHeaderState();
+  if (window.scrollY < 50) {
+    setActiveLink('');
+  }
 };
 
 const smoothScrollTo = id => {
@@ -301,8 +313,194 @@ window.addEventListener('load', () => {
 window.addEventListener('keydown', event => {
   if (event.key === 'Escape') {
     closeMenu();
+    if (projectModal && projectModal.classList.contains('is-active')) {
+      closeModal();
+    }
+    const lightboxModal = document.getElementById('lightbox-modal');
+    if (lightboxModal && lightboxModal.classList.contains('is-active')) {
+      closeLightbox();
+    }
   }
 });
+
+const openModal = card => {
+  if (!projectModal || !modalBody) return;
+  
+  lastFocusedCard = card;
+  const imageSrc = card.querySelector('img').src;
+  const imageAlt = card.querySelector('img').alt;
+  const title = card.querySelector('h3').textContent;
+  const badge = card.querySelector('.project-badge').textContent;
+  const detailsData = card.querySelector('.project-details-data');
+  
+  if (!detailsData) return;
+  
+  const tagline = detailsData.querySelector('.modal-tagline')?.innerHTML || '';
+  const description = detailsData.querySelector('.modal-description')?.innerHTML || '';
+  const features = detailsData.querySelector('.modal-features')?.innerHTML || '';
+  const techExtended = detailsData.querySelector('.modal-tech-extended')?.innerHTML || '';
+  const metaInfo = detailsData.querySelector('.modal-meta-info')?.innerHTML || '';
+  const actionLinks = detailsData.querySelector('.modal-links')?.innerHTML || '';
+  
+  modalBody.innerHTML = `
+    <div class="modal-hero-img modal-anim">
+      <img src="${imageSrc}" alt="${imageAlt}">
+    </div>
+    <div class="modal-main-content">
+      <div class="modal-header-section modal-anim anim-delay-1">
+        <div class="modal-header-left">
+          <h2 id="modal-title">${title}</h2>
+          <div class="modal-tagline">${tagline}</div>
+        </div>
+        <span class="modal-header-badge">${badge}</span>
+      </div>
+      
+      <div class="modal-left-col modal-anim anim-delay-2">
+        <div class="modal-description">
+          ${description}
+        </div>
+        <div class="modal-features-section">
+          <h4>Key Features</h4>
+          <ul class="modal-features">
+            ${features}
+          </ul>
+        </div>
+      </div>
+      
+      <div class="modal-right-col">
+        <div class="modal-right-section modal-anim anim-delay-3">
+          <h4>Technologies</h4>
+          <div class="modal-tech-tags">
+            ${techExtended}
+          </div>
+        </div>
+        
+        <div class="modal-right-section modal-anim anim-delay-4">
+          <h4>Project Details</h4>
+          <div class="modal-meta-list">
+            ${metaInfo}
+          </div>
+        </div>
+        
+        ${actionLinks ? `
+        <div class="modal-actions-container modal-anim anim-delay-5">
+          ${actionLinks}
+        </div>
+        ` : ''}
+      </div>
+    </div>
+  `;
+  
+  body.classList.add('no-scroll');
+  projectModal.classList.add('is-active');
+  projectModal.setAttribute('aria-hidden', 'false');
+  
+  // Set hash to support hardware back button closing
+  window.location.hash = 'view';
+  
+  const closeBtn = projectModal.querySelector('.project-modal-close');
+  if (closeBtn) {
+    closeBtn.focus();
+  }
+};
+  
+const closeModal = (shouldGoBack = true) => {
+  if (!projectModal) return;
+  body.classList.remove('no-scroll');
+  projectModal.classList.remove('is-active');
+  projectModal.setAttribute('aria-hidden', 'true');
+  
+  if (lastFocusedCard) {
+    lastFocusedCard.focus();
+  }
+  
+  if (shouldGoBack && window.location.hash === '#view') {
+    history.back();
+  }
+};
+
+const closeLightbox = (shouldGoBack = true) => {
+  const lightboxModal = document.getElementById('lightbox-modal');
+  if (!lightboxModal) return;
+  body.classList.remove('no-scroll');
+  lightboxModal.classList.remove('is-active');
+  lightboxModal.setAttribute('aria-hidden', 'true');
+  
+  if (shouldGoBack && window.location.hash === '#view') {
+    history.back();
+  }
+};
+
+// Handle native/browser back button clicks to close modals
+window.addEventListener('hashchange', () => {
+  if (window.location.hash !== '#view') {
+    if (projectModal && projectModal.classList.contains('is-active')) {
+      closeModal(false);
+    }
+    const lightboxModal = document.getElementById('lightbox-modal');
+    if (lightboxModal && lightboxModal.classList.contains('is-active')) {
+      closeLightbox(false);
+    }
+  }
+});
+
+// Open modal on project card click
+projectCards.forEach(card => {
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('role', 'button');
+  card.setAttribute('aria-label', `View details for project ${card.querySelector('h3').textContent}`);
+  
+  card.addEventListener('click', event => {
+    if (event.target.closest('a') || event.target.closest('button')) {
+      return;
+    }
+    openModal(card);
+  });
+  
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      if (event.target.closest('a') || event.target.closest('button')) {
+        return;
+      }
+      event.preventDefault();
+      openModal(card);
+    }
+  });
+});
+
+// Close modal on triggers
+if (projectModal) {
+  projectModal.querySelectorAll('[data-modal-close]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      closeModal();
+    });
+  });
+  
+  // Trap focus inside modal
+  projectModal.addEventListener('keydown', event => {
+    if (event.key !== 'Tab') return;
+    
+    const focusableSelectors = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const focusables = projectModal.querySelectorAll(focusableSelectors);
+    
+    if (focusables.length === 0) return;
+    
+    const firstFocusable = focusables[0];
+    const lastFocusable = focusables[focusables.length - 1];
+    
+    if (event.shiftKey) {
+      if (document.activeElement === firstFocusable) {
+        lastFocusable.focus();
+        event.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastFocusable) {
+        firstFocusable.focus();
+        event.preventDefault();
+      }
+    }
+  });
+}
 
 document.addEventListener('click', event => {
   const clickedInsideNav = navPanel.contains(event.target) || menuToggle.contains(event.target);
@@ -310,6 +508,41 @@ document.addEventListener('click', event => {
     closeMenu();
   }
 });
+
+// Project Card Image Lightbox Controller
+const projectImages = document.querySelectorAll('.project-card img');
+const lightboxModal = document.getElementById('lightbox-modal');
+const lightboxImg = lightboxModal?.querySelector('.lightbox-img');
+
+if (projectImages.length > 0 && lightboxModal && lightboxImg) {
+  projectImages.forEach(img => {
+    img.addEventListener('click', event => {
+      event.stopPropagation(); // Stop opening the project detail modal!
+      
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      
+      body.classList.add('no-scroll');
+      lightboxModal.classList.add('is-active');
+      lightboxModal.setAttribute('aria-hidden', 'false');
+      
+      // Set hash to support browser back button closing
+      window.location.hash = 'view';
+      
+      const closeBtn = lightboxModal.querySelector('.lightbox-close');
+      if (closeBtn) {
+        closeBtn.focus();
+      }
+    });
+  });
+  
+  // Close Lightbox
+  lightboxModal.querySelectorAll('[data-lightbox-close]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      closeLightbox();
+    });
+  });
+}
 
 if (prefersReducedMotion) {
   typingTarget.textContent = typingPhrases[0];
