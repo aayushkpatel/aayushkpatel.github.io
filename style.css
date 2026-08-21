@@ -1546,6 +1546,10 @@ body.is-ready .profile-frame img {
     grid-template-columns: 1fr;
   }
 
+  .hero-visual {
+    order: -1;
+  }
+
   .skills-grid,
   .projects-grid,
   .stats-grid {
